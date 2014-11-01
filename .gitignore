@@ -15,6 +15,7 @@
 /tmp
 /lib/assets/*.csv
 
+/.idea/*
 .DS_Store
 
 .elasticbeanstalk
