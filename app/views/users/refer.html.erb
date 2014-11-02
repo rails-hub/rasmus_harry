@@ -71,9 +71,9 @@
         <% 
             words = ''
             if referrals_count == 1
-                words = 'friend has'
+                words = 'Venner har'
             elsif 
-                words = 'friends have'
+                words = 'Venner har'
             end
 
         %>
@@ -81,7 +81,7 @@
         <% if referrals_count == 0 %>
             <p class="place brandon" style="color: #2d2d2d !important;"><span>ingen</span> venner har tilmeldt sig..... Endnu!</p>
         <% else %>
-            <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
+            <p class="place brandon"><span><%= referrals_count %></span> <%= words %>  tilmeldt sig</p>
         <% end %>
         <p class="check brandon">Bliv ved med at tjekke</p>
 
