@@ -13,7 +13,7 @@
         <div class="key"></div>
         <p class="byline brandon">Vær den første til at få besked</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
-            <%= f.text_field :email, :placeholder => "Skriv din Email", :class => "email brandon" %>
+            <%= f.text_field :email, :placeholder => "Skriv din Email", :class => "email brandon", :style => "border: 1px solid #eaa741 !important" %>
             <input class="submit brandon" name="commit" type="submit" value="Kom indenfor" style="background: #eaa741 !important;" />
         <% end %>
     <% end %>

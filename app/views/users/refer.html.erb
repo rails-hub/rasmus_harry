@@ -12,8 +12,7 @@
         </div>
         <div class="share-wrap">
             <p class="why brandon">Lad ikke dine venner i stikken</p>
-            <p class="title brandon">Inviter dine venner &<br> modtag gratis
-            produkter</p>
+            <p class="title brandon">INVITER VENNER &<br> MODTAG PRODUKTER</p>
             <p class="subtitle brandon">
               Del dit unikke link via e-mail, Facebook<br>eller twitter og modtag gratis produkter for<br>hver ven , der tilmelder sig.
             </p>
@@ -46,15 +45,15 @@
  %>
 <div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
     <div class="page-content">
-        <p class="callout brandon">Sådan fungerer det:</p>
+        <p class="callout brandon" style="color: #eaa741 !important;">Sådan fungerer det:</p>
         <ul class="products clearfix">
-            <li class="title brandon"><p class="friends">Tilmeldte venner</p><p class="rewards">Third Field ́s produkter
+            <li class="title brandon"><p class="friends" style="color: #eaa741 !important;">Tilmeldte venner</p><p class="rewards" style="color: #eaa741 !important;">Third Field ́s produkter
             </p></li>
             <% stops.each do |stop| %>
                 <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
                     <div class="circle"><%= stop["count"] %></div>
                     <div class="sep"></div>
-                    <p><%= stop["html"].html_safe %></p>
+                    <p style="color: #2d2d2d !important;"><%= stop["html"].html_safe %></p>
 
                     <div class="tooltip">
                         <img src="<%= stop["image"] %>" height="254">
@@ -80,7 +79,7 @@
         %>
 
         <% if referrals_count == 0 %>
-            <p class="place brandon"><span>ingen</span> venner har tilmeldt sig..... Endnu!</p>
+            <p class="place brandon" style="color: #2d2d2d !important;"><span>ingen</span> venner har tilmeldt sig..... Endnu!</p>
         <% else %>
             <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
         <% end %>
