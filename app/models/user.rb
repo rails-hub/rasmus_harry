@@ -15,19 +15,19 @@ class User < ActiveRecord::Base
           'count' => 5,
           "html" => "Barber<br>crème",
           "class" => "two",
-          "image" => ActionController::Base.helpers.asset_path("/Barber créme first product.jpg")
+          "image" => ActionController::Base.helpers.asset_path("refer/bcfd.jpg")
       },
       {
           'count' => 10,
           "html" => "Mühle DE Skraber",
           "class" => "three",
-          "image" => ActionController::Base.helpers.asset_path("/Mühle DE skraber 2 product.jpg")
+          "image" => ActionController::Base.helpers.asset_path("refer/mdsp.jpg")
       },
       {
           'count' => 25,
           "html" => "Mühle KOSMO<br>barbersæt",
           "class" => "four",
-          "image" => ActionController::Base.helpers.asset_path("/Mühle KOSMO Barbersæt 3 product.jpg")
+          "image" => ActionController::Base.helpers.asset_path("refer/mkbp.jpg")
       },
       {
           'count' => 50,

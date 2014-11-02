@@ -17,7 +17,7 @@
               Del dit unikke link via e-mail, Facebook<br>eller twitter og modtag gratis produkter for<br>hver ven , der tilmelder sig.
             </p>
             <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
-            <% twitter_message = "#Shaving is evolving. Excited for @harrys to launch." %>
+            <% twitter_message = "Everything a #gentleman needs. Spændt på at  @thidfield gå i luften!" %>
             <div class="social-links">
                 <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
                 <div class="sep"></div>
@@ -56,7 +56,7 @@
                     <p style="color: #2d2d2d !important;"><%= stop["html"].html_safe %></p>
 
                     <div class="tooltip">
-                        <img src="<%= stop["image"] %>" height="254">
+                        <img src="<%= stop["image"] %>" height="254" width="190px">
                     </div>
                 </li>
             <% end %>
