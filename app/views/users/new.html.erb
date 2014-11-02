@@ -11,10 +11,10 @@
         <p class="again brandon">Thank You Again!</p>
     <% else %>
         <div class="key"></div>
-        <p class="byline brandon">Be the first to know</p>
+        <p class="byline brandon">Vær den første til at få besked</p>
         <%= form_for @user, :url => { :action => "create" } do |f| %>
-            <%= f.text_field :email, :placeholder => "Enter Email", :class => "email brandon" %>
-            <input class="submit brandon" name="commit" type="submit" value="Step Inside" />
+            <%= f.text_field :email, :placeholder => "Skriv din Email", :class => "email brandon" %>
+            <input class="submit brandon" name="commit" type="submit" value="Kom indenfor" style="background: #eaa741 !important;" />
         <% end %>
     <% end %>
 </div>
