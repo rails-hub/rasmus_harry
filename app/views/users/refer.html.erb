@@ -1,91 +1,104 @@
 <div class="header" style="background: #2d2d2d !important;">
-    <div class="content">
-        <p class="logo brandon">Harry&#8217;s</p>
-        <p class="byline brandon">THANK YOU FOR SIGNING UP</p>
-    </div>
+  <div class="content">
+    <p class="logo brandon">Harry&#8217;s</p>
+
+    <p class="byline brandon">THANK YOU FOR SIGNING UP</p>
+  </div>
 </div>
 
 <div class="hero">
-    <div class="page-content clearfix">
-        <div class="mammoth">
-            <span class="need brandon">Shaving Is<br>Evolving</span>
-        </div>
-        <div class="share-wrap">
-            <p class="why brandon">Lad ikke dine venner i stikken</p>
-            <p class="title brandon">INVITER VENNER &<br> MODTAG PRODUKTER</p>
-            <p class="subtitle brandon">
-              Del dit unikke link via e-mail, Facebook<br>eller twitter og modtag gratis produkter for<br>hver ven , der tilmelder sig.
-            </p>
-            <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
-            <% twitter_message = "Everything a #gentleman needs. Spændt på at  @thidfield gå i luften!" %>
-            <div class="social-links">
-                <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
-                <div class="sep"></div>
-                <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
-            </div>
-        </div>
+  <div class="page-content clearfix">
+    <div class="mammoth">
+      <span class="need brandon">Shaving Is<br>Evolving</span>
     </div>
+    <div class="share-wrap">
+      <p class="why brandon">Lad ikke dine venner i stikken</p>
+
+      <p class="title brandon" style="color: #EAA741;">INVITER VENNER &<br> MODTAG PRODUKTER</p>
+
+      <p class="subtitle brandon">
+        Del dit unikke link via e-mail, Facebook<br>eller twitter og modtag gratis produkter når<br> dine venner tilmelder sig.
+      </p>
+
+      <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
+      <% twitter_message = "Everything a gentleman needs. Så spændt på at @thidfield går i luften!" %>
+      <div class="social-links">
+        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
+
+        <div class="sep"></div>
+        <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
+      </div>
+    </div>
+  </div>
 </div>
 
-<% 
-    referrals_count = @user.referrals.count
+<%
+   referrals_count = @user.referrals.count
 
-    stops = User::REFERRAL_STEPS
+   stops = User::REFERRAL_STEPS
 
-    found = nil
+   found = nil
 
-    stops.reverse_each { |stop|
-        if stop["count"] <= referrals_count and !found
-            stop["selected"] = true
-            found = stop
-        else
-            stop["selected"] = false
-        end
-    }   
- %>
-<div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
-    <div class="page-content">
-        <p class="callout brandon" style="color: #eaa741 !important;">Sådan fungerer det:</p>
-        <ul class="products clearfix">
-            <li class="title brandon"><p class="friends" style="color: #eaa741 !important;">Tilmeldte venner</p><p class="rewards" style="color: #eaa741 !important;">Third Field ́s produkter
-            </p></li>
-            <% stops.each do |stop| %>
-                <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
-                    <div class="circle"><%= stop["count"] %></div>
-                    <div class="sep"></div>
-                    <p style="color: #2d2d2d !important;"><%= stop["html"].html_safe %></p>
+   stops.reverse_each { |stop|
+     if stop["count"] <= referrals_count and !found
+       stop["selected"] = true
+       found = stop
+     else
+       stop["selected"] = false
+     end
+   }
+%>
+<div class="prizes
+  <% if found %>prize-<%= found["class"] %>
+  <% end %>">
+  <div class="page-content">
+    <p class="callout brandon" style="color: #eaa741 !important;">Sådan fungerer det:</p>
+    <ul class="products clearfix">
+      <li class="title brandon"><p class="friends" style="color: #eaa741 !important;">Tilmeldte venner</p>
 
-                    <div class="tooltip">
-                        <img src="<%= stop["image"] %>" height="254" width="190px">
-                    </div>
-                </li>
+        <p class="rewards" style="color: #eaa741 !important;">Third Field ́s produkter
+        </p></li>
+      <% stops.each do |stop| %>
+          <li class="product brandon
+            <% if stop["selected"] %>selected
             <% end %>
-        </ul>
+            <% if stop["class"] == 'five' %>last
+            <% end %>">
+            <div class="circle"><%= stop["count"] %></div>
+            <div class="sep"></div>
+            <p style="color: #2d2d2d !important;"><%= stop["html"].html_safe %></p>
 
-        <div class="progress">
-            <div class="mover">
-                <div class="bar clearfix"></div>
+            <div class="tooltip" style="border: 4px solid #EAA741">
+              <img src="<%= stop["image"] %>" height="254" width="190px">
             </div>
-        </div>
+          </li>
+      <% end %>
+    </ul>
 
-        <% 
-            words = ''
-            if referrals_count == 1
-                words = 'Venner har'
-            elsif 
-                words = 'Venner har'
-            end
-
-        %>
-
-        <% if referrals_count == 0 %>
-            <p class="place brandon" style="color: #2d2d2d !important;"><span>ingen</span> venner har tilmeldt sig..... Endnu!</p>
-        <% else %>
-            <p class="place brandon"><span><%= referrals_count %></span> <%= words %>  tilmeldt sig</p>
-        <% end %>
-        <p class="check brandon">Bliv ved med at tjekke</p>
-
-        <p class="ship brandon">Vi leverer til hele Danmark</p>
-        <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
+    <div class="progress">
+      <div class="mover">
+        <div class="bar clearfix"></div>
+      </div>
     </div>
+
+    <%
+       words = ''
+       if referrals_count == 1
+         words = 'Venner har'
+       elsif words = 'Venner har'
+       end
+
+    %>
+
+    <% if referrals_count == 0 %>
+        <p class="place brandon" style="color: #EAA741 !important;"><span>ingen</span> venner har tilmeldt sig.....
+          Endnu!</p>
+    <% else %>
+        <p class="place brandon"><span><%= referrals_count %></span> <%= words %>  tilmeldt sig</p>
+    <% end %>
+    <p class="check brandon">Bliv ved med at tjekke</p>
+
+    <p class="ship brandon">Vi leverer til hele Danmark</p>
+    <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
+  </div>
 </div>

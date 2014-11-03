@@ -9,8 +9,8 @@ email/refer.jpg: email/refer-52361fd71aff3cb5e4eb3038ab41336a.jpg
 email/refer/index.jpg: email/refer-52361fd71aff3cb5e4eb3038ab41336a.jpg
 email/twitter.jpg: email/twitter-d469adc5ec1cfdb85cc3714c3db041f4.jpg
 email/twitter/index.jpg: email/twitter-d469adc5ec1cfdb85cc3714c3db041f4.jpg
-favicon.ico: favicon-1d8eca370481ab7b6a9a69b5f201f2d4.ico
-favicon/index.ico: favicon-1d8eca370481ab7b6a9a69b5f201f2d4.ico
+favicon.ico: favicon-fa3fdb55927bd5a1c3e0ca75ba32ee97.ico
+favicon/index.ico: favicon-fa3fdb55927bd5a1c3e0ca75ba32ee97.ico
 home/hero.jpg: home/hero-dfe14a47319d7f97cf7de8fde741afb5.jpg
 home/hero/index.jpg: home/hero-dfe14a47319d7f97cf7de8fde741afb5.jpg
 home/hero@2x.jpg: home/hero@2x-c1e28d1d21fe3c0a95e55a2657b2d7ca.jpg
@@ -19,6 +19,8 @@ home/key.png: home/key-da4d58ad73bf5a155ca0f3426d90e901.png
 home/key/index.png: home/key-da4d58ad73bf5a155ca0f3426d90e901.png
 home/key@2x.png: home/key@2x-ece594ba52573774d6b752f03c5d7104.png
 home/key@2x/index.png: home/key@2x-ece594ba52573774d6b752f03c5d7104.png
+refer/bcfd.jpg: refer/bcfd-9702a1b85d4ea564476f20737d5bc4d0.jpg
+refer/bcfd/index.jpg: refer/bcfd-9702a1b85d4ea564476f20737d5bc4d0.jpg
 refer/blade-explain.png: refer/blade-explain-5d5d1eff8ab18125ccbc6e6dd4c2ff7c.png
 refer/blade-explain/index.png: refer/blade-explain-5d5d1eff8ab18125ccbc6e6dd4c2ff7c.png
 refer/blade-explain@2x.png: refer/blade-explain@2x-1d1889a0d73eb0384339b800291b99c0.png
@@ -43,6 +45,10 @@ refer/mammoth.png: refer/mammoth-e0522022e86e63670d99ed1dece5e106.png
 refer/mammoth/index.png: refer/mammoth-e0522022e86e63670d99ed1dece5e106.png
 refer/mammoth@2x.png: refer/mammoth@2x-66110273b3b513054f635ca19f4f984e.png
 refer/mammoth@2x/index.png: refer/mammoth@2x-66110273b3b513054f635ca19f4f984e.png
+refer/mdsp.jpg: refer/mdsp-b1d1b0dbf3b4954dc691b6fec315bd17.jpg
+refer/mdsp/index.jpg: refer/mdsp-b1d1b0dbf3b4954dc691b6fec315bd17.jpg
+refer/mkbp.jpg: refer/mkbp-70251158952e974623eaddab58317527.jpg
+refer/mkbp/index.jpg: refer/mkbp-70251158952e974623eaddab58317527.jpg
 refer/progress-bg.png: refer/progress-bg-4a9966786feaf80d05fffb346ea295fb.png
 refer/progress-bg/index.png: refer/progress-bg-4a9966786feaf80d05fffb346ea295fb.png
 refer/progress-bg@2x.png: refer/progress-bg@2x-3f444bdb8d49c58cad21955969f1b988.png
@@ -69,8 +75,8 @@ application.js: application-22637221ae18f9ad4a508a1d51d0fc22.js
 application/index.js: application-22637221ae18f9ad4a508a1d51d0fc22.js
 active_admin.css: active_admin-b87bd20dc7e403bd90e4734d1d40927c.css
 active_admin/index.css: active_admin-b87bd20dc7e403bd90e4734d1d40927c.css
-application.css: application-753d9f9d57403c704a093f45e2f23639.css
-application/index.css: application-753d9f9d57403c704a093f45e2f23639.css
+application.css: application-e825b4263e4bd5a0ab8521b86f44dfd2.css
+application/index.css: application-e825b4263e4bd5a0ab8521b86f44dfd2.css
 bootstrap.css: bootstrap-51c17b55fcf6ae11d20f20b654c79a79.css
 bootstrap/index.css: bootstrap-51c17b55fcf6ae11d20f20b654c79a79.css
 core.css: core-481b22379fe72a977002dcaf4ac0c391.css
