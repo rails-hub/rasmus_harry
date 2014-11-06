@@ -1,20 +1,28 @@
-<div class="hero">
-    <p class="large brandon" style="color: #2d2d2d !important;">Harry&#8217;s is live</p>
-    <p class="small brandon" style="color: #2d2d2d !important;">Respecting the Face and Wallet<br>Since Like...Right Now.</p>
+<div class="hero" style="background: url('/assets/LP1.png') no-repeat scroll center center / 1600px 446px rgba(0, 0, 0, 0)">
+  <p class="large brandon" style="color: #2d2d2d !important;">Harry&#8217;s is live</p>
+
+  <p class="small brandon" style="color: #2d2d2d !important;">Respecting the Face and Wallet<br>Since Like...Right Now.
+  </p>
 </div>
 
 <div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
-    <% if Rails.application.config.ended %>
-        <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
-        <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS IN THE NEXT DAY OR TWO</p>
-        <p class="go-to brandon">In the meantime, head to  <a href="http://www.harrys.com/">WWW.HARRYS.COM</a></p>
-        <p class="again brandon">Thank You Again!</p>
-    <% else %>
-        <div class="key"></div>
-        <p class="byline brandon" style="color: #2d2d2d !important;">Vær den første til at få besked</p>
-        <%= form_for @user, :url => { :action => "create" } do |f| %>
-            <%= f.text_field :email, :placeholder => "Skriv din Email", :class => "email brandon", :style => "border: 1px solid #eaa741 !important" %>
-            <input class="submit brandon" name="commit" type="submit" value="Kom indenfor" style="background: #eaa741 !important;" />
-        <% end %>
-    <% end %>
+  <% if Rails.application.config.ended %>
+      <p class="thanks brandon">THANK YOU FOR PARTICIPATING<br>IN OUR PRE-LAUNCH.</p>
+
+      <p class="compiling brandon">WE ARE COMPILING REWARDS RIGHT NOW AND WILL EMAIL<br/>COUPON CODES TO ALL RECIPIENTS
+        IN THE NEXT DAY OR TWO</p>
+
+      <p class="go-to brandon">In the meantime, head to <a href="http://www.harrys.com/">WWW.HARRYS.COM</a></p>
+
+      <p class="again brandon">Thank You Again!</p>
+  <% else %>
+      <div class="key" style="background: url('/assets/thridfield_key.png') no-repeat scroll 0 0 / 46px 19px rgba(0, 0, 0, 0)"></div>
+      <p class="byline brandon" style="color: #2d2d2d !important;">Vær den første til at få besked</p>
+      <%= form_for @user, :url => {:action => "create"} do |f| %>
+          <%= f.text_field :email, :placeholder => "Skriv din Email", :class => "email brandon", :style => "border: 1px solid #eaa741 !important" %>
+          <input class="submit brandon" name="commit" type="submit" value="Kom indenfor" style="background: #eaa741 !important;"/>
+      <% end %>
+  <% end %>
 </div>
+
+
