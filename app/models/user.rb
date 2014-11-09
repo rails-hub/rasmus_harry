@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
           'count' => 50,
           "html" => "Third Fields<br>ultimative Barbersæt",
           "class" => "five",
-          "image" => ActionController::Base.helpers.asset_path("refer/blade-explain@2x.png")
+          "image" => ActionController::Base.helpers.asset_path("refer/blade-explain@2x.jpg")
       }
   ]
 

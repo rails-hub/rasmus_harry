@@ -1,6 +1,6 @@
 <div class="header" style="background: #2d2d2d !important;">
   <div class="content">
-    <p class="logo brandon" style="background: url('/assets/LHeader.png') no-repeat scroll 0 0 / 217px 19px rgba(0, 0, 0, 0); width: 230px !important;">Harry&#8217;s</p>
+    <p class="logo brandon" style="background: url('/assets/LHeader.png') no-repeat scroll 0 0 / 217px 19px rgba(0, 0, 0, 0); width: 230px !important;">ThirdField&#8217;s</p>
 
     <p class="byline brandon">THANK YOU FOR SIGNING UP</p>
   </div>
@@ -8,13 +8,13 @@
 
 <div class="hero">
   <div class="page-content clearfix">
-    <div class="mammoth" style="margin-top: 0 !important; background: url('/assets/LP2.png') no-repeat scroll 0 0 / 610px 394px rgba(0, 0, 0, 0)">
+    <div class="mammoth" style="margin-top: 0 !important; background: url('/assets/LHeader.png') no-repeat scroll 0 0 / 610px 394px rgba(0, 0, 0, 0)">
       <!--<span class="need brandon">Shaving Is<br>Evolving</span>-->
     </div>
     <div class="share-wrap">
       <p class="why brandon">Lad ikke dine venner i stikken</p>
 
-      <p class="title brandon" style="color: #EAA741;">INVITER VENNER &<br> MODTAG PRODUKTER</p>
+      <p class="title brandon" style="color: #8C1818;">INVITER VENNER &<br> MODTAG PRODUKTER</p>
 
       <p class="subtitle brandon">
         Del dit unikke link via e-mail, Facebook<br>eller twitter og modtag gratis produkter når<br> dine venner
@@ -24,7 +24,7 @@
       <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
       <% twitter_message = "Everything a gentleman needs. Så spændt på at @thidfield går i luften!" %>
       <div class="social-links">
-        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Harrys" class="fb" target="_blank"></a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=Thirdfield" class="fb" target="_blank"></a>
 
         <div class="sep"></div>
         <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" class="twit" target="_blank"></a>
@@ -53,11 +53,11 @@
   <% if found %>prize-<%= found["class"] %>
   <% end %>">
   <div class="page-content">
-    <p class="callout brandon" style="color: #eaa741 !important;">Sådan fungerer det:</p>
+    <p class="callout brandon" style="color: #8C1818 !important;">Sådan fungerer det:</p>
     <ul class="products clearfix">
-      <li class="title brandon"><p class="friends" style="color: #eaa741 !important;">Tilmeldte venner</p>
+      <li class="title brandon"><p class="friends" style="color: #0B586E !important;">Tilmeldte venner</p>
 
-        <p class="rewards" style="color: #eaa741 !important;">Third Field ́s produkter
+        <p class="rewards" style="color: #0B586E !important;">Third Field ́s produkter
         </p></li>
       <% stops.each do |stop| %>
           <li class="product brandon
@@ -92,7 +92,7 @@
     %>
 
     <% if referrals_count == 0 %>
-        <p class="place brandon" style="color: #EAA741 !important;"><span>ingen</span> venner har tilmeldt sig.....
+        <p class="place brandon" style="color: #0B586E !important;"><span>ingen</span> venner har tilmeldt sig.....
           Endnu!</p>
     <% else %>
         <p class="place brandon"><span><%= referrals_count %></span> <%= words %>  tilmeldt sig</p>
