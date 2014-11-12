@@ -29,6 +29,8 @@ end
 
 gem 'delayed_job_active_record'
 
+gem 'daemons'
+
 gem 'unicorn'
 
 gem 'rails_12factor', group: :production
